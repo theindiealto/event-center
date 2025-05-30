@@ -1,0 +1,391 @@
+/* Color Scheme */
+:root {
+    --dark-grey: #1e1e1e;
+    --medium-grey: #393838;
+    --light-grey: #a6a3a3;
+    --background: #d9d9d9;
+    --accent-color: #8dd0af;
+}
+body {
+    background-color: var(--background);
+}
+
+/* Fonts */
+@font-face {
+    font-family: "lexend_deca";
+    src: url("fonts/Lexend_Deca/static/LexendDeca-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "lexend_zetta";
+    src: url("fonts/Lexend_Zetta/static/LexendZetta-Regular.ttf") format("truetype");
+}
+
+/* Nav Bar */
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.container-nav a {
+    text-decoration: none;
+    color: var(--dark-grey);
+}
+.logo {
+    background-color: var(--accent-color);
+    font-family: "lexend_zetta", sans-serif;
+    color: var(--dark-grey);
+    letter-spacing: 0.2em;
+    font-size: xx-large;
+    height: 107px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    flex-grow: 1;
+    border: none;
+}
+.nav-buttons {
+    display: flex;
+}
+.nav-button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: var(--background);
+    font-family: "lexend_deca", sans-serif;
+    font-size: x-large;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding-bottom: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 154px;
+    height: 107px;
+    border: none;
+}
+.nav-button:hover {
+    background-color: var(--light-grey);
+    box-shadow: 0 1px 2px 0 var(--dark-grey);
+}
+
+/* Headings and Paragraph Text */
+h1,h2,h3 {
+    font-family: "lexend_zetta", sans-serif;
+    color: var(--medium-grey);
+    text-align: center;
+}
+h4,h5,h6 {
+    font-family: "lexend_deca", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    color: var(--dark-grey);
+    text-align: center;
+}
+p {
+    font-family: "lexend_deca", sans-serif;
+    color: var(--dark-grey);
+}
+h1 a {
+    text-decoration: none;
+    color: var(--medium-grey);
+    transition: text-shadow 0.3s ease;
+}
+h1 a:hover {
+    text-shadow: 1px 1px 5px var(--dark-grey);
+}
+
+/* Images */
+.image-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2px;
+    position: relative;
+}
+.image {
+    filter: grayscale(100%) brightness(40%);
+}
+.image-text {
+    color: var(--background);
+    font-family: "lexend_zetta", sans-serif;
+    font-size: 60px;
+    text-shadow: 2px 2px 4px black;
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+}
+.image-text-accent {
+    color: var(--accent-color);
+    font-family: "lexend_zetta", sans-serif;
+    font-size: 60px;
+    text-shadow: 2px 2px 4px black;
+    bottom: 8px;
+    left: 20px;
+}
+.event-image {
+    filter: grayscale(100%)
+}
+
+/* Quote Blocks */
+.quote {
+    background-color: var(--light-grey);
+    border-radius: 32px;
+    font-family: "lexend_deca", sans-serif;
+    letter-spacing: 0.1em;
+    color: var(--dark-grey);
+    margin:20px;
+    padding: 15px;
+    text-align: center;
+}
+
+/*Content Blocks */
+.container-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 20px;
+    gap: 10px;
+}
+.block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--accent-color);
+    border-radius: 32px;
+    padding: 10px;
+    text-align: center;
+}
+.block a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    transition: text-shadow 0.3s ease;
+}
+.block a:hover {
+    text-shadow: 1px 1px 5px var(--dark-grey);
+}
+
+/* About Us */
+.section-about {
+    background-color: var(--medium-grey);
+    width: auto;
+    color: var(--accent-color);
+    font-family: "lexend_zetta", sans-serif;
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+.about-block {
+    background-color: var(--background);
+    width: auto;
+    border-radius: 32px;
+    color: var(--dark-grey);
+    font-family: "lexend_deca", sans-serif;
+    font-size: medium;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--light-grey);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.footer-head {
+    color: var(--dark-grey);
+    font-family: "lexend_zetta", sans-serif;
+    font-size: x-large;
+    text-align: center;
+    margin: 10px;
+}
+.footer a {
+    text-decoration: none;
+    color: var(--dark-grey);
+}
+.footer input {
+    font-family: "lexend_deca", sans-serif;
+    letter-spacing: 0.2em;
+    padding: 5px;
+    border: none;
+}
+.submit-button {
+    font-family: "lexend_deca", sans-serif;
+    font-weight: bold;
+    background-color: var(--accent-color);
+    border: none;
+    letter-spacing: 0.2em;
+    padding: 5px 10px;
+    transition: box-shadow 0.3s ease;
+    color: var(--medium-grey);
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.submit-button:hover {
+    box-shadow: 1px 1px 5px var(--dark-grey);
+}
+.subfooter {
+    color: var(--medium-grey);
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+.subfooter-headings {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 10px;
+}
+.subfooter-headings h3 {
+    margin: 0;
+}
+.left-links {
+    text-align: center;
+}
+.site-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.site-links a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    transition: text-shadow 0.3s ease;
+}
+.site-links a:hover {
+    text-shadow: 1px 1px 3px var(--dark-grey);
+}
+.right-socials {
+    text-align: center;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.icon {
+    border: none;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+.icon:hover {
+    box-shadow: 1px 1px 10px var(--dark-grey);
+}
+
+/* Contact Us Form */
+.contact-form {
+    background-color: var(--dark-grey);
+    border: none;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+.contact-form input {
+    font-family: "lexend_zetta";
+    background-color: white;
+    color: var(--medium-grey);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+.contact-form select {
+    font-family: "lexend_zetta";
+    background-color: white;
+    color: var(--medium-grey);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+.contact-form textarea {
+    font-family: "lexend_zetta";
+    background-color: white;
+    color: var(--medium-grey);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+.contact-form input[type=submit] {
+    font-family: "lexend_zetta";
+    background-color: var(--accent-color);
+    color: var(--medium-grey);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.contact-form input[type=submit]:hover {
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+
+/* Table */
+table {
+    font-family: "lexend_deca", sans-serif;
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    table-layout: fixed;
+    width: 98%;
+}
+th, tr, td {
+    padding: 5px;
+}
+tr:hover {
+    background-color: var(--background);
+}
+
+/* Media Queries */
+@media screen and (max-width:768px) {
+    .container-block {
+        flex-direction: column;
+    }
+    .image-container {
+        width: 100%;
+    }
+    .container-nav {
+        flex-direction: column;
+    }
+    .nav-buttons {
+        flex-direction: column;
+    }
+    .subfooter {
+        flex-direction: column;
+    }
+    .nav-button {
+        height: 50%;
+    }
+    .logo {
+        text-size-adjust: 75%;
+        width: 100%;
+    }
+    .image-text {
+        text-size-adjust: 40%;
+    }
+    .image-text-accent {
+        text-size-adjust: 40%;
+    }
+    table {
+        text-size-adjust: 70%;
+    }
+    textarea {
+        width: 85%;
+    }
+}
